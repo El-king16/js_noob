@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Использование функций</title>
+<link href="../_css/site.css" rel="stylesheet">
+<script>
+      function withoutNDS() {
+            var amount = parseFloat(prompt("Введите сумму за товар:"));
+            if (!isNaN(amount) && amount > 0) {
+                var totalWithoutNDS = amount / 1.18; 
+                document.getElementById("result").textContent = totalWithoutNDS.toFixed(2) + " рублей";
+            } else {
+                alert("Некорректная сумма. Пожалуйста, введите положительное число.");
+            }
+        }
+</script>
+</head>
+
+<body onload="withoutNDS()">
+<div class="wrapper">
+  <header>
+    
+    JAVASCRIPT <span class="amp">:</span> Lesson2.3
+  </header>
+  <div class="content">
+    <div class="main">
+      <h1>Использование функций (НДС)</h1>
+      <p>Сумма без ндс: <strong id="result"> </strong></p>
+    </div>
+  </div>
+  <footer>
+    <p>JavaScript - Lesson2.3</p>
+  </footer>
+</div>
+</body>
+</html>
